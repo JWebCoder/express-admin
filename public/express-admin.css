@@ -26,8 +26,21 @@
 #controls button { width: auto; }
 #controls .btn-danger { float: left; }
 
+#menu {
+  width: 200px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
 /*fixed header fix*/
-#content { padding-top: 70px; }
+#content {
+  padding-top: 70px;
+  width: calc(100% - 200px);
+  margin-left: 200px;
+}
 /*login header*/
 #login .label-default { color: #f8f8f2; }
 
