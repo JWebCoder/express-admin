@@ -29,6 +29,7 @@ exports.admin = function (req, res) {
   res.locals.custom = !customs.length ? null : {items: customs};
 
   res.locals.partials.header = 'header';
+  res.locals.partials.menu = 'menu';
   res.locals.partials.breadcrumbs = 'breadcrumbs';
   res.locals.partials.theme = 'js/theme';
   res.locals.partials.layout = 'js/layout';

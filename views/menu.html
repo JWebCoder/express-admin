@@ -1,0 +1,58 @@
+<aside id="menu">
+  {{#tables}}
+  <table class="table table-bordered table-striped table-hover x-table">
+      <thead>
+          <tr class="label-default">
+              <th>{{string.tables}}</th>
+          </tr>
+      </thead>
+      <tbody>
+      {{#items}}
+          <tr>
+              <td>
+                  <a href="{{root}}/{{slug}}">{{name}}</a>
+                  <a href="{{root}}/{{slug}}/add" class="glyphicon glyphicon-plus" title="{{string.add}} {{name}}"></a>
+              </td>
+          </tr>
+      {{/items}}
+      </tbody>
+  </table>
+  {{/tables}}
+
+  {{#views}}
+  <table class="table table-bordered table-striped table-hover x-table">
+      <thead>
+          <tr class="label-default">
+              <th>{{string.views}}</th>
+          </tr>
+      </thead>
+      <tbody>
+      {{#items}}
+          <tr>
+              <td>
+                  <a href="{{root}}/{{slug}}">{{name}}</a>
+              </td>
+          </tr>
+      {{/items}}
+      </tbody>
+  </table>
+  {{/views}}
+  {{#custom}}
+  <table class="table table-bordered table-striped table-hover x-table">
+      <thead>
+          <tr class="label-default">
+              <th>{{string.others}}</th>
+          </tr>
+      </thead>
+      <tbody>
+      {{#items}}
+          <tr>
+              <td>
+                  <a href="{{root}}/{{slug}}">{{name}}</a>
+              </td>
+          </tr>
+      {{/items}}
+      </tbody>
+  </table>
+  {{/custom}}
+</aside>

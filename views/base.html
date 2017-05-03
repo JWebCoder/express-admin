@@ -27,78 +27,18 @@
 </head>
 <body id="express-admin" class="container">
 
-<div id="wrapper">
-    {{>header}}
-    {{>layout}}
-    <div class="main-container">
-      <aside id="menu">
-        {{#tables}}
-        <table class="table table-bordered table-striped table-hover x-table">
-            <thead>
-                <tr class="label-default">
-                    <th>{{string.tables}}</th>
-                </tr>
-            </thead>
-            <tbody>
-            {{#items}}
-                <tr>
-                    <td>
-                        <a href="{{root}}/{{slug}}">{{name}}</a>
-                        <a href="{{root}}/{{slug}}/add" class="glyphicon glyphicon-plus" title="{{string.add}} {{name}}"></a>
-                    </td>
-                </tr>
-            {{/items}}
-            </tbody>
-        </table>
-        {{/tables}}
+  <div id="wrapper">
+      {{>header}}
+      {{>layout}}
+      <div class="main-container">
+        {{>menu}}
+        <section id="content">
+            {{>breadcrumbs}}
 
-        {{#views}}
-        <table class="table table-bordered table-striped table-hover x-table">
-            <thead>
-                <tr class="label-default">
-                    <th>{{string.views}}</th>
-                </tr>
-            </thead>
-            <tbody>
-            {{#items}}
-                <tr>
-                    <td>
-                        <a href="{{root}}/{{slug}}">{{name}}</a>
-                    </td>
-                </tr>
-            {{/items}}
-            </tbody>
-        </table>
-        {{/views}}
-        {{#custom}}
-        <table class="table table-bordered table-striped table-hover x-table">
-            <thead>
-                <tr class="label-default">
-                    <th>{{string.others}}</th>
-                </tr>
-            </thead>
-            <tbody>
-            {{#items}}
-                <tr>
-                    <td>
-                        <a href="{{root}}/{{slug}}">{{name}}</a>
-                    </td>
-                </tr>
-            {{/items}}
-            </tbody>
-        </table>
-        {{/custom}}
-      </aside>
-      <section id="content">
-          {{>breadcrumbs}}
-
-          {{>content}}
-      </section>
-    </div>
-    <div id="footer-push">&nbsp;</div>
-</div>
-<footer>
-    <p><small><a href="http://simov.github.io/express-admin-site/" target="_blank" class="text-muted">Express Admin</a></small></p>
-</footer>
+            {{>content}}
+        </section>
+      </div>
+      <div id="footer-push">&nbsp;</div>
+  </div>
 </body>
 </html>
