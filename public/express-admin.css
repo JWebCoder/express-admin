@@ -41,6 +41,12 @@
   width: calc(100% - 200px);
   margin-left: 200px;
 }
+
+#content.login {
+  width: auto;
+  margin: 0 auto;
+}
+
 /*login header*/
 #login .label-default { color: #f8f8f2; }
 

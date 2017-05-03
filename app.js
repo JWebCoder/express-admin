@@ -269,7 +269,7 @@ function initServer (args) {
     }());
 
     // login/logout
-    app.get('/login', r.login.get, r.render.admin);
+    app.get('/login', r.login.get, r.render.login);
     app.post('/login', r.auth.login);
     app.get('/logout', r.auth.logout);
 
