@@ -1,0 +1,24 @@
+.top-bar {
+  background: $background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand {
+    color: $primary-color-background;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 6px 0;
+  }
+
+  .dropdown-toggle {
+    color: $primary-color-background;
+    padding: 6px;
+
+    &:hover,
+    &:focus {
+      background-color: $secundary-background;
+      color: $primary-color-background;
+    }
+  }
+}

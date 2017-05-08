@@ -32,7 +32,6 @@ exports.admin = function (req, res) {
   res.locals.partials.menu = 'menu';
   res.locals.partials.breadcrumbs = 'breadcrumbs';
   res.locals.partials.theme = 'js/theme';
-  res.locals.partials.layout = 'js/layout';
 
   res.render('base', {
 
@@ -48,7 +47,6 @@ exports.admin = function (req, res) {
 exports.login = function (req, res) {
   res.locals.partials.header = 'header';
   res.locals.partials.theme = 'js/theme';
-  res.locals.partials.layout = 'js/layout';
 
   res.render('baseLogin', {
 

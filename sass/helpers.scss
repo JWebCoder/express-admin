@@ -1,0 +1,9 @@
+.container {
+  padding: 10px;
+  width: 100%;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+}

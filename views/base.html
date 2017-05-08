@@ -25,14 +25,13 @@
     <script src="{{root}}{{.}}" type="text/javascript" charset="utf-8"></script>
     {{/libs.js}}
 </head>
-<body id="express-admin" class="container">
+<body>
 
   <div id="wrapper">
       {{>header}}
-      {{>layout}}
       <div class="main-container">
         {{>menu}}
-        <section id="content">
+        <section id="content" class="container">
             {{>breadcrumbs}}
 
             {{>content}}

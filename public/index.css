@@ -1,0 +1,22 @@
+.top-bar {
+  background: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .top-bar .brand {
+    color: #f9f9f9;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 6px 0; }
+  .top-bar .dropdown-toggle {
+    color: #f9f9f9;
+    padding: 6px; }
+    .top-bar .dropdown-toggle:hover, .top-bar .dropdown-toggle:focus {
+      background-color: #666666;
+      color: #f9f9f9; }
+
+.container {
+  padding: 10px;
+  width: 100%; }
+  .container:after, .container:before {
+    display: none; }

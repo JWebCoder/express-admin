@@ -29,7 +29,7 @@
 #menu {
   width: 200px;
   position: fixed;
-  top: 70px;
+  top: 52px;
   left: 0;
   bottom: 0;
   overflow: auto;
@@ -37,9 +37,13 @@
 
 /*fixed header fix*/
 #content {
-  padding-top: 70px;
-  width: calc(100% - 200px);
-  margin-left: 200px;
+  position: fixed;
+  top: 52px;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  width: auto;
 }
 
 #content.login {
