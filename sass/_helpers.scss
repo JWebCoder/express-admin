@@ -7,3 +7,18 @@
     display: none;
   }
 }
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+
+  .glyphicon {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

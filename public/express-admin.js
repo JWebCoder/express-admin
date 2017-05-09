@@ -92,6 +92,13 @@ $(function () {
         }
     }());
 
+    $('[data-toggle-target]').each(function (index, elem) {
+      var $elem = $(elem);
+      $elem.click(function () {
+        $('[data-toggle-container="' + $elem.attr('data-toggle-target') + '"]').toggle();
+      });
+    });
+
     // inlines
     $('.add-another').on('click', function (e) {
         // table and current index
@@ -108,7 +115,7 @@ $(function () {
             var $controls = getControls(this);
             $controls.each(function (i) {
                 var name = $(this).attr('name');
-                $(this).attr('name', 
+                $(this).attr('name',
                     name.replace('blank', 'records').replace('index', index));
             });
         });
@@ -118,7 +125,7 @@ $(function () {
             $rows.eq(0).find('input').attr('name',
                 name.replace('blank', 'records').replace('index', index));
         }());
-        
+
         // append
         var tbody = $('tbody', $table);
         $rows.appendTo(tbody);
@@ -151,7 +158,7 @@ $(function () {
         // re-set the indexes
         $('.head:not(.blank)', $table).each(function (index) {
             var idx = -1;
-            
+
             $('.jumbotron input', this).each(function () {
                 var name = $(this).attr('name');
                 idx = name.match(/.*(\[\d+\]).*/)[1];
@@ -167,7 +174,7 @@ $(function () {
                 });
             });
         });
-        
+
         // one
         if ($table.parents('#one').length) {
             $('tfoot', $table).removeClass('hidden');
@@ -201,7 +208,7 @@ $(function () {
     });
 
     // lang
-    $('#x-lang a').on('click', function (e) {
+    $('[lang-selector] a').on('click', function (e) {
         cookie.setItem('lang', this.hash.slice(1));
         window.location.reload(true);
         return false;

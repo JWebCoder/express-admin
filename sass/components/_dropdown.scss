@@ -1,28 +1,32 @@
 .dropdown {
   position: relative;
 
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+
+    .dropdown-toggle {
+      background-color: $background-light;
+      color: $text-light;
+    }
+  }
+
+  &:focus,
+  &:active {
+    .dropdown-items {
+      display: block;
+    }
+
+    .dropdown-overlay {
+      display: block;
+    }
+  }
+
   .dropdown-toggle {
-    color: $primary-color-background;
+    color: $text-light;
     padding: 6px;
     display: block;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $secundary-background;
-      color: $primary-color-background;
-    }
-
-    &:focus,
-    &:active {
-      ~ .dropdown-items {
-        display: block;
-      }
-
-      ~ .dropdown-overlay {
-        display: block;
-      }
-    }
   }
 
   .dropdown-items {
@@ -34,7 +38,7 @@
     list-style: none;
     z-index: 1;
     border: 1px solid $background;
-    background-color: $primary-color-background;
+    background-color: $background-lightest;
     width: 110px;
 
     li {

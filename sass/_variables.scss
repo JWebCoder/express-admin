@@ -2,10 +2,10 @@ $black: #000;
 $white: #f9f9f9;
 
 $background: lighten($black, 20);
-$secundary-background: lighten($black, 40);
+$background-light: lighten($background, 30);
+$background-lightest: lighten($background-light, 47);
 
-$primary-color: $black;
-$secundary-color: lighten($black, 30);
+$border: $background;
 
-$primary-color-background: $white;
-$secundary-color-background: darken($white, 30);
+$text-light: $white;
+$text: $black;

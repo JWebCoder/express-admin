@@ -27,10 +27,10 @@
       {{/themes}}
 
       {{#languages}}
-      <div class="dropdown">
-        <a href="#" class="dropdown-toggle">{{string.language}} <b class="caret"></b></a>
+      <div class="dropdown" tabindex="0" lang-selector>
+        <div class="dropdown-toggle">{{string.language}} <b class="caret"></b></div>
         <div class="dropdown-overlay"></div>
-        <ul id="x-lang" class="dropdown-items">
+        <ul class="dropdown-items">
           {{#language}}
           <li><a href="#{{key}}">{{name}}</a></li>
           {{/language}}

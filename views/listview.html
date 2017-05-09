@@ -1,12 +1,14 @@
 
 {{#view}}
-<h2>
+<h2 class="main-title">
+  <div>
     {{#table}}{{string.select}} {{name}} {{string.to-change}}.{{/table}}
     {{^table}}{{name}}{{/table}}
     <a href="#" class="glyphicon glyphicon-filter" title="{{string.filter}}"></a>
-    {{#table}}
-    <a href="{{root}}/{{slug}}/add" class="btn btn-default">{{string.add}} {{name}}</a>
-    {{/table}}
+  </div>
+  {{#table}}
+  <a href="{{root}}/{{slug}}/add" class="btn btn-default">{{string.add}} {{name}}</a>
+  {{/table}}
 </h2>
 {{/view}}
 
@@ -26,7 +28,7 @@
 
 {{>filter}}
 
-<table class="table table-bordered table-striped table-hover x-table">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr class="label-default">
         {{#columns}}

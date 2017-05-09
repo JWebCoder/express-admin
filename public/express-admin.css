@@ -86,7 +86,7 @@
 /*fix for all fields*/
 .x-table .form-group { margin-bottom: 0; }
 /*inline table headers*/
-.x-table .label-default { color: #f8f8f2; }
+.table .label-default { color: #f8f8f2; }
 /*checkbox remove inline*/
 .x-table .head td { padding-top: 0; padding-bottom: 0; }
 .x-table .head label { float: right; margin-bottom: 0; }

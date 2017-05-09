@@ -1,58 +1,63 @@
 <aside id="menu">
+  {{#tableGroups}}
+    {{#items}}
+      <nav class="menu-group">
+        <header class="menu-group-name" data-toggle-target="{{name}}">{{name}}</header>
+        <ul class="menu-item-list" data-toggle-container="{{name}}">
+          {{#tables}}
+            <li class="menu-item">
+              <a href="{{root}}/{{slug}}">{{name}}</a>
+              <a href="{{root}}/{{slug}}/add" class="glyphicon glyphicon-plus" title="{{string.add}} {{name}}"></a>
+            </li>
+          {{/tables}}
+        </ul>
+      </nav>
+    {{/items}}
+  {{/tableGroups}}
+
   {{#tables}}
-  <table class="table table-bordered table-striped table-hover x-table">
-      <thead>
-          <tr class="label-default">
-              <th>{{string.tables}}</th>
-          </tr>
-      </thead>
-      <tbody>
-      {{#items}}
-          <tr>
-              <td>
-                  <a href="{{root}}/{{slug}}">{{name}}</a>
-                  <a href="{{root}}/{{slug}}/add" class="glyphicon glyphicon-plus" title="{{string.add}} {{name}}"></a>
-              </td>
-          </tr>
-      {{/items}}
-      </tbody>
-  </table>
+    <nav class="menu-group">
+      <header class="menu-group-name" data-toggle-target="{{string.tables}}">{{string.tables}}</header>
+      <ul class="menu-item-list" data-toggle-container="{{string.tables}}">
+        {{#items}}
+          <li class="menu-item">
+            <a href="{{root}}/{{slug}}">{{name}}</a>
+            <a href="{{root}}/{{slug}}/add" class="glyphicon glyphicon-plus" title="{{string.add}} {{name}}"></a>
+          </li>
+        {{/items}}
+      </ul>
+    </nav>
   {{/tables}}
 
   {{#views}}
-  <table class="table table-bordered table-striped table-hover x-table">
-      <thead>
-          <tr class="label-default">
-              <th>{{string.views}}</th>
-          </tr>
-      </thead>
-      <tbody>
-      {{#items}}
-          <tr>
-              <td>
-                  <a href="{{root}}/{{slug}}">{{name}}</a>
-              </td>
-          </tr>
-      {{/items}}
-      </tbody>
-  </table>
+    <table class="table table-bordered table-striped table-hover x-table">
+        <thead>
+            <tr class="label-default">
+                <th>{{string.views}}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#items}}
+            <tr>
+                <td>
+                    <a href="{{root}}/{{slug}}">{{name}}</a>
+                </td>
+            </tr>
+        {{/items}}
+        </tbody>
+    </table>
   {{/views}}
+
   {{#custom}}
-  <table class="table table-bordered table-striped table-hover x-table">
-      <thead>
-          <tr class="label-default">
-              <th>{{string.others}}</th>
-          </tr>
-      </thead>
-      <tbody>
-      {{#items}}
-          <tr>
-              <td>
-                  <a href="{{root}}/{{slug}}">{{name}}</a>
-              </td>
-          </tr>
-      {{/items}}
-      </tbody>
-  </table>
+    <nav class="menu-group">
+      <header class="menu-group-name" data-toggle-target="{{string.others}}">{{string.others}}</header>
+      <ul class="menu-item-list" data-toggle-container="{{string.others}}">
+        {{#items}}
+          <li class="menu-item">
+            <a href="{{root}}/{{slug}}">{{name}}</a>
+          </li>
+        {{/items}}
+      </ul>
+    </nav>
   {{/custom}}
 </aside>

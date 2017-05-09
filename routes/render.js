@@ -4,10 +4,31 @@ exports.admin = function (req, res) {
     custom = res.locals._admin.custom;
 
   var tables = [];
+  var tableGroups = [];
   for (var key in settings) {
-      var item = settings[key];
+      let item = settings[key],
+        groupKey = null;
       if (!item.mainview.show || !item.table.pk || item.table.view) continue;
-      tables.push({slug: item.slug, name: item.table.verbose});
+
+      if (item.group) {
+        for (let groupIndex in tableGroups) {
+            let group = tableGroups[groupIndex];
+            if (group.name === item.group) {
+              groupKey = groupIndex;
+            }
+        }
+
+        if (groupKey) {
+          tableGroups[groupKey].tables.push({slug: item.slug, name: item.table.verbose});
+        } else {
+          tableGroups.push({
+            tables: [{slug: item.slug, name: item.table.verbose}],
+            name: item.group
+          });
+        }
+      } else {
+        tables.push({slug: item.slug, name: item.table.verbose});
+      }
   }
 
   var views = [];
@@ -24,6 +45,8 @@ exports.admin = function (req, res) {
       customs.push({slug: item.slug, name: item.verbose});
   }
 
+
+  res.locals.tableGroups = !tableGroups.length ? null : {items: tableGroups};
   res.locals.tables = !tables.length ? null : {items: tables};
   res.locals.views = !views.length ? null : {items: views};
   res.locals.custom = !customs.length ? null : {items: customs};

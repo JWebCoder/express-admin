@@ -11,17 +11,19 @@
 
 .dropdown {
   position: relative; }
+  .dropdown:hover, .dropdown:focus, .dropdown:active {
+    outline: none; }
+    .dropdown:hover .dropdown-toggle, .dropdown:focus .dropdown-toggle, .dropdown:active .dropdown-toggle {
+      background-color: gray;
+      color: #f9f9f9; }
+  .dropdown:focus .dropdown-items, .dropdown:active .dropdown-items {
+    display: block; }
+  .dropdown:focus .dropdown-overlay, .dropdown:active .dropdown-overlay {
+    display: block; }
   .dropdown .dropdown-toggle {
     color: #f9f9f9;
     padding: 6px;
     display: block; }
-    .dropdown .dropdown-toggle:hover, .dropdown .dropdown-toggle:focus, .dropdown .dropdown-toggle:active {
-      background-color: #666666;
-      color: #f9f9f9; }
-    .dropdown .dropdown-toggle:focus ~ .dropdown-items, .dropdown .dropdown-toggle:active ~ .dropdown-items {
-      display: block; }
-    .dropdown .dropdown-toggle:focus ~ .dropdown-overlay, .dropdown .dropdown-toggle:active ~ .dropdown-overlay {
-      display: block; }
   .dropdown .dropdown-items {
     display: none;
     position: absolute;
@@ -31,7 +33,7 @@
     list-style: none;
     z-index: 1;
     border: 1px solid #333333;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
     width: 110px; }
     .dropdown .dropdown-items li {
       padding: 5px;
@@ -47,8 +49,39 @@
     right: 0;
     z-index: 1; }
 
+.menu-group {
+  margin-bottom: 10px; }
+  .menu-group-name {
+    color: #f9f9f9;
+    background-color: gray;
+    padding: 5px; }
+  .menu-group .menu-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .menu-group .menu-item {
+    padding: 5px;
+    border-bottom: 1px solid #333333; }
+  .menu-group .glyphicon {
+    font-size: 12px;
+    margin-left: 5px; }
+  .menu-group a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none; }
+
 .container {
   padding: 10px;
   width: 100%; }
   .container:after, .container:before {
     display: none; }
+
+.main-title {
+  display: flex;
+  justify-content: space-between; }
+  .main-title .glyphicon {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle; }
+  .main-title a {
+    text-decoration: none; }
