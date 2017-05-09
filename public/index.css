@@ -8,12 +8,44 @@
     font-size: 18px;
     text-decoration: none;
     padding: 6px 0; }
-  .top-bar .dropdown-toggle {
+
+.dropdown {
+  position: relative; }
+  .dropdown .dropdown-toggle {
     color: #f9f9f9;
-    padding: 6px; }
-    .top-bar .dropdown-toggle:hover, .top-bar .dropdown-toggle:focus {
+    padding: 6px;
+    display: block; }
+    .dropdown .dropdown-toggle:hover, .dropdown .dropdown-toggle:focus, .dropdown .dropdown-toggle:active {
       background-color: #666666;
       color: #f9f9f9; }
+    .dropdown .dropdown-toggle:focus ~ .dropdown-items, .dropdown .dropdown-toggle:active ~ .dropdown-items {
+      display: block; }
+    .dropdown .dropdown-toggle:focus ~ .dropdown-overlay, .dropdown .dropdown-toggle:active ~ .dropdown-overlay {
+      display: block; }
+  .dropdown .dropdown-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+    border: 1px solid #333333;
+    background-color: #f9f9f9;
+    width: 110px; }
+    .dropdown .dropdown-items li {
+      padding: 5px;
+      border-bottom: 1px solid #333333; }
+      .dropdown .dropdown-items li:last-child {
+        border: none; }
+  .dropdown .dropdown-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; }
 
 .container {
   padding: 10px;
