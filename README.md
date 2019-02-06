@@ -3,10 +3,7 @@
 
 ---
 
-[![img-npm-install]][url-npm]
-
 [![img-npm-version]][url-npm]
-[![img-npm-downloads]][url-npm]
 [![img-travis]][url-travis]
 
 
@@ -23,7 +20,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2012-2017 Simeon Velichkov &lt;simeonvelichkov@gmail.com&gt;
+Copyright (c) 2012-present Simeon Velichkov <simeonvelichkov@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
